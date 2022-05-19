@@ -6,6 +6,8 @@ services:
       - db
     depends_on:
       - flyway
+    ports:
+      - 4567:4567
   flyway:
     image: dhoer/flyway:alpine
     command: -url=jdbc:mysql://db -schemas=myschema -user=root -password=P@ssw0rd migrate
