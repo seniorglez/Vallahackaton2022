@@ -1,5 +1,4 @@
 function loadNewPage(pageName) {
-    //document.getElementsByTagName("body")[0].innerHTML = load("/pages/" + pageName + ".html");
     file_get_contents("/front/pages/" + pageName + ".html", (function (text){
         document.getElementsByTagName("body")[0].innerHTML = text
     }));
