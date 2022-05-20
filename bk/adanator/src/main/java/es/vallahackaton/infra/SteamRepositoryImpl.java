@@ -15,7 +15,7 @@ import java.util.List;
 public class SteamRepositoryImpl implements SteamRepository {
     @Override
     public Result<List<STEAMGirl>, String> getAll() {
-            String query = "";
+            String query = "SELECT * FROM referrers";
             try(Connection connection = getConnection()) {
                 BeanListHandler<STEAMGirl> beanListHandler = new BeanListHandler<>(STEAMGirl.class);
                 QueryRunner runner = new QueryRunner();
