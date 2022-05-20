@@ -3,7 +3,7 @@ function loadNewPage(pageName) {
     file_get_contents("/front/pages/" + pageName + ".html", (function (text){
         document.getElementsByTagName("body")[0].innerHTML = text
     }));
-    loadJavascriptFile("/js/front/" + pageName + ".js");
+    loadJavascriptFile("/front/js/front/" + pageName + ".js");
     
 }
 
@@ -15,5 +15,6 @@ var loadJavascriptFile = function (filePath) {
     var script = document.createElement("script")
     script.type = "text/javascript";
     script.src = filePath;
+    console.log(document.getElementsByTagName("body")[0]);
     document.getElementsByTagName("body")[0].appendChild(script);
 }
