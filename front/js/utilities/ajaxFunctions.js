@@ -15,7 +15,5 @@ var loadJavascriptFile = function (filePath) {
     var script = document.createElement("script")
     script.type = "text/javascript";
     script.src = filePath;
-    console.log(document.getElementsByTagName("body")[0]);
-    document.getElementsByTagName("body")[0].innerHTML = script;
-    console.log('hola mundo')
+    document.getElementsByTagName("body")[0].appendChild(script);
 }
